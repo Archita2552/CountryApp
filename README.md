@@ -1,5 +1,6 @@
 # Where in the World?
 Explore global country information with ease. View a list of countries with filtering options by region, and click on any country to see detailed data including flags, capitals, and more. Enjoy a modern interface with light and dark mode options for a personalized experience.
+
 Description
 The Country App allows users to explore detailed information about countries around the world. Users can view a list of countries, filter them by region, and access detailed information about each country by clicking on its card. The app features a modern and responsive design with support for both light and dark modes.
 
