@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="countryApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Country Details</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body ng-controller="CountryDetailsController">
+  <!-- Back Button -->
+  <div class="container mt-4">
+    <button class="btn-back" ng-click="goBack()">&#8592; Back</button>
+
+    <!-- Country Details -->
+    <div class="country-details" ng-if="selectedCountry">
+      <!-- Centered Flag -->
+      <div class="flag-container">
+        <img ng-src="{{selectedCountry.flags.svg}}" alt="{{selectedCountry.name}}" class="country-flag">
+      </div>
+
+      <!-- Country Information -->
+      <h2><b>{{selectedCountry.name}}</b></h2>
+      <p><strong>Native Name:</strong> {{selectedCountry.nativeName}}</p>
+      <p><strong>Population:</strong> {{selectedCountry.population | number}}</p>
+      <p><strong>Region:</strong> {{selectedCountry.region}}</p>
+      <p><strong>Subregion:</strong> {{selectedCountry.subregion}}</p>
+      <p><strong>Capital:</strong> {{selectedCountry.capital}}</p>
+      <p><strong>Top Level Domain:</strong> {{selectedCountry.topLevelDomain.join(', ')}}</p>
+      <p><strong>Currencies:</strong> 
+        <span ng-repeat="currency in selectedCountry.currencies">
+          {{currency.name}} ({{currency.symbol}}){{ $last ? '' : ', ' }}
+        </span>
+      </p>
+      <p><strong>Languages:</strong> 
+        <span ng-repeat="language in selectedCountry.languages">
+          {{language.name}} ({{language.nativeName}}){{ $last ? '' : ', ' }}
+        </span>
+      </p>
+      <p><strong>Borders:</strong>
+        <span ng-repeat="border in selectedCountry.borders">
+          {{border}}{{ $last ? '' : ', ' }}
+        </span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

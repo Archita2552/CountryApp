@@ -1,0 +1,167 @@
+/* General Styling */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2, h3 {
+    margin: 15px 0 10px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #202c37;
+    color: white;
+}
+
+/* Header Styling */
+.header {
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dark Mode Header */
+.dark-mode .header {
+    color: white;
+}
+
+/* Dark Mode Switch */
+.dark-mode-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dark-mode-switch input {
+    margin-right: 10px;
+}
+
+/* Search and Filter Styling */
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.form-control {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Filter Region Styling */
+.filter-region select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Country Card Styling */
+.country-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark Mode Card */
+.dark-mode .country-card {
+    background-color: #2b3945;
+    color: white;
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Country Image Styling */
+.country-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Dark Mode for Inputs */
+.dark-mode .form-control,
+.dark-mode select {
+    background-color: #2b3945;
+    color: white;
+    border: none;
+}
+
+/* Back Button Styling */
+.btn-back {
+    background-color: #672280;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #A626D3;
+}
+
+/* Country Details Page Styling */
+.country-details {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.country-details h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.country-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.country-details strong {
+    color: #d4b2e0;
+}
+
+/* Country Details Page Flag Container */
+.flag-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.country-flag {
+    width: 300px;
+}
